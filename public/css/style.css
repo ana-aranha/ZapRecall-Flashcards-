@@ -74,6 +74,11 @@ h1{
     width: 70vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.flash-card:hover{
+    cursor: pointer;
 }
 
 .bottom{
