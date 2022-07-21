@@ -16,7 +16,4 @@ function questionTemplade(el, index){
 
 function Question(el){
     console.table(el.question, el.answer)
-/* return(
-    <div>{el.question}</div>
-) */
 }
