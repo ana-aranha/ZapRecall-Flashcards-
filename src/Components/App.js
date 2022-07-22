@@ -4,7 +4,6 @@ import Deck from "./Deck-page"
 
 export default function App(){
     const[screen,setScreen] = React.useState('home')
-    console.log(screen)
 
     return (
         <>
