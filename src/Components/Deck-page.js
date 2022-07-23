@@ -14,11 +14,7 @@ export default function Deck() {
 				counter={counter}
 				setcounter={setcounter}
 			/>
-			<Bottom
-				flashCards={flashCards}
-				counter={counter}
-				setcounter={setcounter}
-			/>
+			<Bottom flashCards={flashCards} counter={counter} />
 		</>
 	);
 }
