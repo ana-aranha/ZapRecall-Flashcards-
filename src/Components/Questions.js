@@ -1,34 +1,16 @@
-import IonIconTemplade from "./Ion-icon"
+import FlashCardView from "./Flash-card"
+import QuestionTemplade from "./Question-templade"
 import React from "react"
 
-export default function Questions({flashCards,setFlashCards}){
-    return(flashCards.map((objCard, index) => questionTemplade(objCard, index, {setFlashCards})))
+export default function Questions({flashCards,counter, setcounter}){
+    return(flashCards.map((objCard, index) => QuestionsTemplade(objCard, index,counter, setcounter)))
 }
 
-function questionTemplade(el, index, {setFlashCards}){
-    if(el.type === false){
-        return(
-            <div className="align-center" key = {index} onClick={()=>question(el, setFlashCards)}>
-                <div className={el.styleClass}>
-                    <p>Pergunta {index+1}</p><IonIconTemplade name="play-outline"/>
-                </div>
-            </div>
-            )
-    } else{
-        return(
-            <div className="align-center" key = {index} onClick={()=>question(el, setFlashCards)}>
-                <div className={el.styleClass}>
-                    <p>{el.question}</p><IonIconTemplade name="play-outline"/>
-                </div>
-            </div>
-            )
-    }
-
+function QuestionsTemplade(el, index, counter, setcounter){
+    const [viewCard, setViewCard] = React.useState(el)
+    const [iconQuestion, setIconQuestion] = React.useState('play-outline')
+    return(
+    <>
+    { viewCard.type? <QuestionTemplade index={index} viewCard={viewCard} setViewCard={setViewCard} iconQuestion={iconQuestion}/> : <FlashCardView index={index} viewCard={viewCard} setViewCard={setViewCard} setIconQuestion={setIconQuestion} counter={counter} setcounter={setcounter}/>}
+    </>)
 }
-
-function question(el, setFlashCards){
-    console.log(el, setFlashCards)
-    el.type = true
-    /* const newEl = {...el} */
-    /* setFlashCards(newEl) */
- }

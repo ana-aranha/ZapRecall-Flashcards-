@@ -1,0 +1,12 @@
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.top img{
+    height: 60px;
+    width: 36px;
+    margin-right: 10px;
+}

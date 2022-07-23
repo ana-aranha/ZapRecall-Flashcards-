@@ -1,3 +1,5 @@
+import './style.css'
+
 export default function HomePage({setScreen}){
     return(
     <div className="align-center home-page">
