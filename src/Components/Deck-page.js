@@ -5,16 +5,12 @@ import React from "react";
 
 export default function Deck() {
 	const flashCards = arr.sort(comparador);
-	const [counter, setcounter] = React.useState(0);
+	const [teste, setTeste] = React.useState([]);
 	return (
 		<>
 			<Top />
-			<Questions
-				flashCards={flashCards}
-				counter={counter}
-				setcounter={setcounter}
-			/>
-			<Bottom flashCards={flashCards} counter={counter} />
+			<Questions flashCards={flashCards} teste={teste} setTeste={setTeste} />
+			<Bottom flashCards={flashCards} teste={teste} />
 		</>
 	);
 }

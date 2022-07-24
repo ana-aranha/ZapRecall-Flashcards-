@@ -2,17 +2,16 @@ import React from "react";
 
 export default function FlashCardView({
 	viewCard,
-	index,
 	setViewCard,
 	setIconQuestion,
-	counter,
-	setcounter,
+	teste,
+	setTeste,
 }) {
 	let deckFace = " deckFace";
 	return (
 		<>
 			{viewCard.frontFace ? (
-				<div className="align-center" key={index}>
+				<div className="align-center">
 					<div className={viewCard.styleClass + deckFace}>
 						<div>
 							<p>{viewCard.question}</p>
@@ -28,7 +27,7 @@ export default function FlashCardView({
 					</div>
 				</div>
 			) : (
-				<div className="align-center" key={index}>
+				<div className="align-center">
 					<div className={viewCard.styleClass + deckFace}>
 						<div>
 							<p>{viewCard.answer}</p>
@@ -43,8 +42,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										counter,
-										setcounter,
+										teste,
+										setTeste,
 									)
 								}
 							>
@@ -59,8 +58,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										counter,
-										setcounter,
+										teste,
+										setTeste,
 									)
 								}
 							>
@@ -75,8 +74,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										counter,
-										setcounter,
+										teste,
+										setTeste,
 									)
 								}
 							>
@@ -102,14 +101,15 @@ function answerCard(
 	setIconQuestion,
 	viewCard,
 	setViewCard,
-	counter,
-	setcounter,
+	teste,
+	setTeste,
 ) {
 	setIconQuestion(icon);
 	let aux = { ...viewCard };
 	aux.styleClass += classQuestion;
 	aux.type = true;
 	setViewCard(aux);
-	let newCounter = counter + 1;
-	setcounter(newCounter);
+	let newStr = [...teste];
+	newStr.push(icon);
+	setTeste(newStr);
 }

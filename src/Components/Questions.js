@@ -2,13 +2,13 @@ import FlashCardView from "./Flash-card";
 import QuestionTemplade from "./Question-templade";
 import React from "react";
 
-export default function Questions({ flashCards, counter, setcounter }) {
+export default function Questions({ flashCards, teste, setTeste }) {
 	return flashCards.map((objCard, index) =>
-		QuestionsTemplade(objCard, index, counter, setcounter),
+		QuestionsTemplade(objCard, index, teste, setTeste),
 	);
 }
 
-function QuestionsTemplade(el, index, counter, setcounter) {
+function QuestionsTemplade(el, index, teste, setTeste) {
 	const [viewCard, setViewCard] = React.useState(el);
 	const [iconQuestion, setIconQuestion] = React.useState("play-outline");
 	return (
@@ -22,12 +22,11 @@ function QuestionsTemplade(el, index, counter, setcounter) {
 				/>
 			) : (
 				<FlashCardView
-					index={index}
 					viewCard={viewCard}
 					setViewCard={setViewCard}
 					setIconQuestion={setIconQuestion}
-					counter={counter}
-					setcounter={setcounter}
+					teste={teste}
+					setTeste={setTeste}
 				/>
 			)}
 		</>
