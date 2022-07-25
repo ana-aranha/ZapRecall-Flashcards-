@@ -8,6 +8,7 @@ export default function FlashCardView({
 	setIconQuestion,
 	answerArr,
 	setanswerArr,
+	index,
 }) {
 	let deckFace = " deckFace";
 	return (

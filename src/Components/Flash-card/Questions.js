@@ -3,12 +3,19 @@ import QuestionTemplade from "./Question-templade";
 import React from "react";
 
 export default function Questions({ flashCards, answerArr, setanswerArr }) {
-	return flashCards.map((objCard, index) =>
-		QuestionsTemplade(objCard, index, answerArr, setanswerArr),
-	);
+	return flashCards.map((objCard, index) => (
+		<QuestionsTemplade
+			key={"questiontemplade" + index}
+			objCard={objCard}
+			index={index}
+			answerArr={answerArr}
+			setanswerArr={setanswerArr}
+			el={objCard}
+		/>
+	));
 }
 
-function QuestionsTemplade(el, index, answerArr, setanswerArr) {
+function QuestionsTemplade({ el, index, answerArr, setanswerArr }) {
 	const [viewCard, setViewCard] = React.useState(el);
 	const [iconQuestion, setIconQuestion] = React.useState("play-outline");
 	return (

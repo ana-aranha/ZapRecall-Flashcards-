@@ -12,13 +12,14 @@ export default function HomePage({ setScreen, setDeckNum, deckNum }) {
 				<div className="align-center home-page">
 					<img src={logotipo} alt="Zap Recall logo" />
 					<h1>ZapRecall</h1>
-					<div className="deck-selection">
+					<div
+						className="deck-selection"
+						onClick={() => {
+							deckOptions({ setDeckSelection });
+						}}
+					>
 						<p>Escolha o seu Deck</p>
-						<div
-							onClick={() => {
-								deckOptions({ setDeckSelection });
-							}}
-						>
+						<div>
 							<IonIconTemplade name="chevron-down-outline" />
 						</div>
 					</div>

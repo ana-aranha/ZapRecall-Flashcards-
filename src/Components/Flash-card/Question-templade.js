@@ -12,7 +12,6 @@ export default function QuestionTemplade({
 		<>
 			<div
 				className="align-center"
-				key={index}
 				onClick={() => question(viewCard, setViewCard)}
 			>
 				<div className={viewCard.styleClass}>
