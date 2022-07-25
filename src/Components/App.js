@@ -6,13 +6,19 @@ import "./assets/CSS/style.css";
 
 export default function App() {
 	const [screen, setScreen] = React.useState("home");
+	const [deckNum, setDeckNum] = React.useState("Nenhum");
 
 	return (
 		<>
 			{screen === "home" ? (
-				<HomePage screen={screen} setScreen={setScreen} />
+				<HomePage
+					screen={screen}
+					setScreen={setScreen}
+					setDeckNum={setDeckNum}
+					deckNum={deckNum}
+				/>
 			) : (
-				<Deck />
+				<Deck deckNum={deckNum} />
 			)}
 		</>
 	);

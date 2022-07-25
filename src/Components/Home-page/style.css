@@ -56,3 +56,9 @@ ion-icon:hover{
     border: 1px solid #ADADAD;
     cursor: pointer;
 }
+
+.selecionado{
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-top: 20px;
+}

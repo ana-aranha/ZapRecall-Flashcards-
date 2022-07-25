@@ -4,8 +4,8 @@ import Questions from "../Flash-card/Questions";
 import React from "react";
 import { decks } from "./Data";
 
-export default function Deck() {
-	const flashCards = decks[0].sort(comparador);
+export default function Deck({ deckNum }) {
+	const flashCards = decks[deckNum].sort(comparador);
 	const [answerArr, setanswerArr] = React.useState([]);
 	return (
 		<>
