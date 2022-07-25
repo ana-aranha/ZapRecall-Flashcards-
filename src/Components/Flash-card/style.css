@@ -1,0 +1,100 @@
+.flash-card {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 16px 22px;
+  width: 85vw;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.align-center .flash-card {
+  margin-top: 30px;
+}
+
+.flash-card>div {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+
+.flash-card img {
+  height: 16px;
+  width: 16px;
+  margin: 16px;
+}
+
+.flash-card:hover {
+  cursor: pointer;
+}
+
+.wrong {
+  background-color: #FF3030;
+  color: #FFFFFF;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 80px;
+  display: flex;
+  text-align: center;
+  border-radius: 7px;
+  height: 40px;
+}
+
+.rigth {
+  background-color: #2FBE34;
+  color: #FFFFFF;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 80px;
+  display: flex;
+  text-align: center;
+  border-radius: 7px;
+  height: 40px;
+}
+
+.almost {
+  background-color: #FF922E;
+  color: #FFFFFF;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 80px;
+  display: flex;
+  text-align: center;
+  border-radius: 7px;
+  height: 40px;
+}
+
+.zap {
+  color: #2FBE34;
+  text-decoration: line-through;
+}
+
+.almost-zap {
+  color: #FF922E;
+  text-decoration: line-through;
+}
+
+.not-zap {
+  color: #FF3030;
+  text-decoration: line-through;
+}
+
+.deckFace {
+  background-color: #FEFAD4;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+
+.deckFace div:first-child {
+  margin-bottom: 20px;
+}

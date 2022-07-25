@@ -1,17 +1,19 @@
 import IonIconTemplade from "../Ion-icons/Ion-icon";
 import "./style.css";
+import sad from "../assets/img/sad.png";
+import party from "../assets/img/party.png";
 
-export default function Bottom({ flashCards, teste }) {
+export default function Bottom({ flashCards, answerArr }) {
 	return (
 		<div className="align-center bottom">
-			<Message teste={teste} flashCards={flashCards} />
+			<Message answerArr={answerArr} flashCards={flashCards} />
 			<div>
 				<p>
-					{teste.length}/{flashCards.length} CONCLUÍDOS
+					{answerArr.length}/{flashCards.length} CONCLUÍDOS
 				</p>
 			</div>
 			<div>
-				{teste.map((icon, index) => (
+				{answerArr.map((icon, index) => (
 					<IonIconTemplade name={icon} key={index} />
 				))}
 			</div>
@@ -19,12 +21,11 @@ export default function Bottom({ flashCards, teste }) {
 	);
 }
 
-function Message({ teste, flashCards }) {
-	console.log(teste.includes("close-circle"));
+function Message({ answerArr, flashCards }) {
 	return (
 		<>
-			{teste.length === flashCards.length ? (
-				<ResultMessage teste={teste} />
+			{answerArr.length === flashCards.length ? (
+				<ResultMessage answerArr={answerArr} />
 			) : (
 				<></>
 			)}
@@ -32,13 +33,13 @@ function Message({ teste, flashCards }) {
 	);
 }
 
-function ResultMessage({ teste }) {
+function ResultMessage({ answerArr }) {
 	return (
 		<>
-			{teste.includes("close-circle") ? (
+			{answerArr.includes("close-circle") ? (
 				<>
 					<div>
-						<img src="assets/img/sad.png" alt="sad emoji" />
+						<img src={sad} alt="sad emoji" />
 						<span>Putz...</span>
 					</div>
 					<div>Ainda faltam alguns... Mas não desanime! </div>
@@ -46,7 +47,7 @@ function ResultMessage({ teste }) {
 			) : (
 				<>
 					<div>
-						<img src="assets/img/party.png" alt="party emoji" />
+						<img src={party} alt="party emoji" />
 						<span>Parabéns!!</span>
 					</div>
 					<div>Você não esqueceu nenhum flashCard!</div>

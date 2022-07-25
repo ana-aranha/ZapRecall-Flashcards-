@@ -1,11 +1,13 @@
 import React from "react";
+import seta from "../assets/img/setinha.png";
+import "./style.css";
 
 export default function FlashCardView({
 	viewCard,
 	setViewCard,
 	setIconQuestion,
-	teste,
-	setTeste,
+	answerArr,
+	setanswerArr,
 }) {
 	let deckFace = " deckFace";
 	return (
@@ -19,7 +21,7 @@ export default function FlashCardView({
 						<div>
 							<p></p>
 							<img
-								src="assets/img/setinha.png"
+								src={seta}
 								alt="arrow"
 								onClick={() => open(viewCard, setViewCard)}
 							/>
@@ -42,8 +44,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										teste,
-										setTeste,
+										answerArr,
+										setanswerArr,
 									)
 								}
 							>
@@ -58,8 +60,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										teste,
-										setTeste,
+										answerArr,
+										setanswerArr,
 									)
 								}
 							>
@@ -74,8 +76,8 @@ export default function FlashCardView({
 										setIconQuestion,
 										viewCard,
 										setViewCard,
-										teste,
-										setTeste,
+										answerArr,
+										setanswerArr,
 									)
 								}
 							>
@@ -101,15 +103,15 @@ function answerCard(
 	setIconQuestion,
 	viewCard,
 	setViewCard,
-	teste,
-	setTeste,
+	answerArr,
+	setanswerArr,
 ) {
 	setIconQuestion(icon);
 	let aux = { ...viewCard };
 	aux.styleClass += classQuestion;
 	aux.type = true;
 	setViewCard(aux);
-	let newStr = [...teste];
+	let newStr = [...answerArr];
 	newStr.push(icon);
-	setTeste(newStr);
+	setanswerArr(newStr);
 }

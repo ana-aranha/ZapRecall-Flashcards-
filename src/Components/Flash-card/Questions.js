@@ -2,13 +2,13 @@ import FlashCardView from "./Flash-card";
 import QuestionTemplade from "./Question-templade";
 import React from "react";
 
-export default function Questions({ flashCards, teste, setTeste }) {
+export default function Questions({ flashCards, answerArr, setanswerArr }) {
 	return flashCards.map((objCard, index) =>
-		QuestionsTemplade(objCard, index, teste, setTeste),
+		QuestionsTemplade(objCard, index, answerArr, setanswerArr),
 	);
 }
 
-function QuestionsTemplade(el, index, teste, setTeste) {
+function QuestionsTemplade(el, index, answerArr, setanswerArr) {
 	const [viewCard, setViewCard] = React.useState(el);
 	const [iconQuestion, setIconQuestion] = React.useState("play-outline");
 	return (
@@ -25,8 +25,8 @@ function QuestionsTemplade(el, index, teste, setTeste) {
 					viewCard={viewCard}
 					setViewCard={setViewCard}
 					setIconQuestion={setIconQuestion}
-					teste={teste}
-					setTeste={setTeste}
+					answerArr={answerArr}
+					setanswerArr={setanswerArr}
 				/>
 			)}
 		</>

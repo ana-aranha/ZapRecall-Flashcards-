@@ -1,5 +1,6 @@
-import IonIconTemplade from "./Ion-icons/Ion-icon";
+import IonIconTemplade from "../Ion-icons/Ion-icon";
 import React from "react";
+import "./style.css";
 
 export default function QuestionTemplade({
 	viewCard,

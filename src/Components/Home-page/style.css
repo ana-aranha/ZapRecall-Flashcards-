@@ -25,3 +25,34 @@
     height: 161px;
     margin-bottom: 14px;
 }
+
+.deck-selection{
+    background-color: #FFFFFF;
+    color: #ADADAD;
+    background-color: #FFFFFF;
+    width: 70vw;
+    height: 54px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px ;
+    margin-top: 50px;
+}
+
+ion-icon:hover{
+    cursor: pointer;
+}
+
+.decks{
+ flex-direction: column;
+ padding: 0;
+ height: auto;   
+}
+
+.decks div{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ADADAD;
+    cursor: pointer;
+}
