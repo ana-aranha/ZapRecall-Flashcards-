@@ -52,14 +52,26 @@ export const decks = [
 	],
 	[
 		{
-			question: "pergunta",
-			answer: "resposta",
+			question: "心",
+			answer: "kokoro - Hearth (related to)",
 			type: true,
 			styleClass: "flash-card",
 		},
 		{
-			question: "pergunta",
-			answer: "resposta",
+			question: "心臓",
+			answer: "Shinzoo - Hearth(organ)",
+			type: true,
+			styleClass: "flash-card",
+		},
+		{
+			question: "悲",
+			answer: "Kana - Sadness",
+			type: true,
+			styleClass: "flash-card",
+		},
+		{
+			question: "思",
+			answer: "omo - think, thoughts",
 			type: true,
 			styleClass: "flash-card",
 		},

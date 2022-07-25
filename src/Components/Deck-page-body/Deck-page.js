@@ -5,7 +5,7 @@ import React from "react";
 import { decks } from "./Data";
 
 export default function Deck() {
-	const flashCards = decks[1].sort(comparador);
+	const flashCards = decks[0].sort(comparador);
 	const [answerArr, setanswerArr] = React.useState([]);
 	return (
 		<>
